@@ -1,0 +1,15 @@
+# Full-resolution camera originals.
+# These live in your OneDrive folder and are the source for the cropped,
+# web-sized copies in Pictures/web/. The website never loads them, so
+# there's no reason to publish ~88MB of them on every deploy.
+Pictures/*
+!Pictures/web/
+
+# Old building photo, no longer used anywhere on the site.
+image0.jpeg
+
+# Windows / OneDrive / editor clutter
+Thumbs.db
+desktop.ini
+.DS_Store
+*.bak

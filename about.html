@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About | Abide House Columbus</title>
+<meta name="description" content="The story behind Abide House Columbus. A faith-based hair salon and barbershop in German Village, built on community, craft, and care.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a6d42' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11 12 4l9 7'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M10 20v-6h4v6'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Mulish:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#f6f1e9;--cream:#fffdf9;--ink:#2a2521;--soft:#675f56;
+    --gold:#8a6d42;--gold-soft:#c4a878;--blush:#ecdfd2;--taupe:#a8978a;
+    --dark:#241f1b;--line:#e6ddd0;
+    --display:'Cormorant Garamond',Georgia,serif;--body:'Mulish',-apple-system,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--body);color:var(--ink);background:var(--ivory);line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--display);font-weight:500;line-height:1.08}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+  .eyebrow{font-family:var(--body);text-transform:uppercase;letter-spacing:.32em;font-size:11px;font-weight:700;color:var(--gold)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:var(--body);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:12.5px;padding:14px 30px;border-radius:2px;cursor:pointer;border:1px solid var(--ink);transition:all .25s ease}
+  .btn-gold{background:var(--gold);color:#fff;border-color:var(--gold)}
+  .btn-gold:hover{background:#74592f;border-color:#74592f}
+  .btn-outline{background:transparent;color:var(--ink)}
+  .btn-outline:hover{background:var(--ink);color:var(--ivory)}
+
+  /* header */
+  header{position:sticky;top:0;z-index:60;background:rgba(246,241,233,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mark{color:var(--gold);flex:none}
+  .brand .nm{font-family:var(--display);font-size:24px;font-weight:500;letter-spacing:.05em;line-height:1}
+  .brand .nm b{font-weight:600}
+  .brand .loc{display:block;font-family:var(--body);font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:4px;line-height:1}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);transition:color .2s}
+  .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+  .nav-links a.active{font-weight:700}
+
+  /* page hero */
+  .about-hero{background:var(--dark);color:#fff;padding:88px 0;text-align:center;position:relative;overflow:hidden}
+  .about-hero:before{content:"";position:absolute;inset:0;
+    background:radial-gradient(ellipse 80% 60% at 50% 120%,rgba(138,109,66,.35),transparent);
+    pointer-events:none}
+  .about-hero .eyebrow{color:var(--gold-soft);display:block;margin-bottom:20px;position:relative}
+  .about-hero h1{font-size:clamp(52px,9vw,106px);font-weight:500;position:relative}
+  .about-hero h1 em{font-style:italic;color:var(--gold-soft)}
+  .about-hero p{font-size:18px;color:rgba(255,255,255,.75);max-width:46ch;margin:22px auto 0;font-weight:300;position:relative}
+
+  /* story section */
+  .story{padding:80px 0}
+  .story h2{font-size:clamp(36px,5vw,56px);font-weight:500}
+  .story h2 em{font-style:italic;color:var(--gold)}
+  .accent-rule{width:48px;height:3px;background:var(--gold)}
+
+  /* closing scripture band */
+  .verse{background:var(--blush);padding:80px 28px;text-align:center}
+  .verse .inner{max-width:760px;margin:0 auto}
+  .verse .open-quote{font-family:var(--display);font-size:92px;color:var(--gold);opacity:.32;line-height:.55;display:block;margin-bottom:8px}
+  .verse blockquote{font-family:var(--display);font-style:italic;font-size:clamp(23px,3.4vw,36px);color:var(--ink);line-height:1.36;font-weight:400}
+  .verse cite{display:block;font-family:var(--body);font-style:normal;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:22px}
+
+  /* footer */
+  footer{background:var(--dark);color:#a79b8d;padding:54px 0 28px;font-size:14px}
+  .foot-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.1)}
+  footer .brand{margin-bottom:12px}
+  footer .brand .nm{color:#fff}
+  footer h4{font-family:var(--body);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:13px;font-weight:700}
+  footer a{display:block;color:#a79b8d;padding:3px 0;transition:color .2s;font-weight:300}
+  footer a:hover{color:var(--gold-soft)}
+  footer p{font-weight:300}
+  .foot-bot{padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12px;color:#7d7367}
+
+  .nav-burger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:4px}
+  .nav-burger span{display:block;width:24px;height:2px;background:var(--ink);border-radius:2px;transition:all .25s}
+  .mobile-nav{position:fixed;inset:0;z-index:100;background:var(--ivory);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:36px;opacity:0;visibility:hidden;transform:translateY(-10px);transition:all .3s ease}
+  .mobile-nav.open{opacity:1;visibility:visible;transform:none}
+  .mobile-nav a{font-family:var(--display);font-size:38px;font-weight:500;color:var(--ink);letter-spacing:.04em;transition:color .2s}
+  .mobile-nav a:hover{color:var(--gold)}
+  .mobile-close{position:absolute;top:26px;right:28px;background:none;border:none;cursor:pointer;color:var(--soft);font-family:var(--body);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+  .mobile-close:hover{color:var(--gold)}
+
+  @media(max-width:880px){
+    .nav-burger{display:flex}
+    .nav-links{display:none}
+  }
+
+  .co-badge{display:inline-block;background:var(--gold);color:#fff;font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;padding:4px 11px;border-radius:2px;margin:18px 0 6px}
+
+  .story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+  .story-card{background:var(--cream);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column}
+  .story-card .sphoto{height:320px;position:relative;overflow:hidden;background:linear-gradient(160deg,#cdb79a,#8a6d42);flex:none}
+  .story-card .sbody{padding:22px 24px 26px;flex:1;display:flex;flex-direction:column}
+  .story-card h3{font-size:26px;font-weight:500}
+  .story-card .srole{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:3px}
+  .story-card .sdivide{width:32px;height:2px;background:var(--gold);margin:16px 0;flex:none}
+  .story-card .prompt{background:var(--ivory);border-left:3px solid var(--gold);border-radius:0 5px 5px 0;padding:16px 18px;flex:1}
+  .story-card .prompt p{font-size:13.5px;color:var(--soft);font-style:italic;line-height:1.65}
+  .story-card .slink{display:inline-block;margin-top:14px;font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--gold);text-decoration:none}
+  .story-card .slink:hover{text-decoration:underline;text-underline-offset:3px}
+  @media(max-width:780px){.story-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.story-grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+      <span class="nm">Abide <b>House</b><span class="loc">Columbus</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html#team">Our Artists</a>
+      <a href="index.html#house">Our Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="index.html#visit">Visit</a>
+    </div>
+    <button class="nav-burger" onclick="toggleNav()" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <button class="mobile-close" onclick="toggleNav()">✕ Close</button>
+  <a href="index.html#team">Our Artists</a>
+  <a href="index.html#house">Our Home</a>
+  <a href="about.html">About</a>
+  <a href="index.html#visit">Visit</a>
+</div>
+
+<section class="about-hero">
+  <div class="wrap">
+    <span class="eyebrow">Our Story</span>
+    <h1>About <em>Abide House</em></h1>
+    <p>Built on faith. Rooted in community. A genuine calling to serve.</p>
+    <p style="margin-top:20px;font-size:16px;color:rgba(255,255,255,.65);max-width:48ch;margin-left:auto;margin-right:auto;font-weight:300;font-style:italic">&ldquo;Abide&rdquo; isn&rsquo;t just a name. It&rsquo;s the heartbeat of everything we do here. A daily invitation to rest, belong, and be cared for.</p>
+
+    <div style="margin-top:36px;padding-top:32px;border-top:1px solid rgba(255,255,255,.15);max-width:680px;margin-left:auto;margin-right:auto">
+      <span style="font-family:var(--display);font-size:72px;color:var(--gold-soft);opacity:.45;line-height:.5;display:block;margin-bottom:10px">&ldquo;</span>
+      <p style="font-family:var(--display);font-style:italic;font-size:clamp(20px,2.8vw,30px);color:rgba(255,255,255,.72);line-height:1.45;font-weight:400">I am the vine, you are the branches. He who abides in Me, and I in him, bears much fruit; for without Me you can do nothing.</p>
+      <p style="font-family:var(--body);font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-soft);font-weight:700;margin-top:18px">&mdash; John 15:5</p>
+    </div>
+  </div>
+</section>
+
+<!-- THE STORY -->
+<section class="story">
+  <div class="wrap">
+    <div style="text-align:center;max-width:600px;margin:0 auto">
+      <span class="eyebrow">How it started</span>
+      <h2 style="margin-top:14px">The <em>Story</em></h2>
+      <div class="accent-rule" style="margin:18px auto"></div>
+      <p style="color:var(--soft);font-weight:300;font-size:16px">Three co-founders, one calling. Each shares their own piece of the story. Why Abide House exists, what it means to them, and the vision they&rsquo;re building together.</p>
+    </div>
+    <div class="story-grid">
+      <div class="story-card">
+        <div class="sphoto" style="background-image:url('Pictures/web/shelby-portrait.jpg');background-size:cover;background-position:center 20%"></div>
+        <div class="sbody">
+          <span class="co-badge">Co-Owner</span>
+          <h3>Shelby</h3>
+          <div class="srole">Color Specialist</div>
+          <div class="sdivide"></div>
+          <div class="prompt">
+            <p>After nearly a decade behind the chair, the Lord brought to life my dream of opening a salon. A place to grow my business, help women feel their best, inside and out, and most importantly a place where I could have Jesus on display front and center!</p>
+          </div>
+          <a class="slink" href="index.html#team">Book with Shelby &rarr;</a>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="sphoto" style="background-image:url('Pictures/web/brittney-portrait.jpg');background-size:cover;background-position:center 20%"></div>
+        <div class="sbody">
+          <span class="co-badge">Co-Owner</span>
+          <h3>Brittney</h3>
+          <div class="srole">Stylist</div>
+          <div class="sdivide"></div>
+          <div class="prompt">
+            <p>Abide House represents the belief that beauty is about more than how we look — it's about how we feel. It's a space built on trust, connection, and creating moments where every guest feels valued, confident, and truly themselves.</p>
+          </div>
+          <a class="slink" href="https://brittneyguerrero.glossgenius.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio">Book with Brittney &rarr;</a>
+        </div>
+      </div>
+      <div class="story-card">
+        <div class="sphoto" style="background-image:url('Pictures/web/aiden-portrait.jpg');background-size:cover;background-position:center 20%"></div>
+        <div class="sbody">
+          <span class="co-badge">Co-Owner</span>
+          <h3>Aiden</h3>
+          <div class="srole">Barber</div>
+          <div class="sdivide"></div>
+          <div class="prompt">
+            <p>Hoping to dedicate my service to the Lord.</p>
+          </div>
+          <a class="slink" href="https://aiden-guerrero.square.site/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&utm_id=97760_v0_s00_e0_tv3">Book with Aiden &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLOSING SCRIPTURE -->
+<section class="verse">
+  <div class="inner">
+    <span class="open-quote">&ldquo;</span>
+    <blockquote>And we have known and believed the love that God has for us. God is love, and he who abides in love abides in God, and God in him.</blockquote>
+    <cite>1 John 4:16</cite>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div style="max-width:280px">
+        <a class="brand" href="index.html">
+          <span class="mark" style="color:var(--gold-soft)"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
+          <span class="nm">Abide <b>House</b></span>
+        </a>
+        <p>A faith-based studio in the heart of German Village, Columbus. A warm home for hair, community, and care.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <a href="index.html#team">Our Artists</a>
+        <a href="index.html#house">Our Home</a>
+        <a href="about.html">About</a>
+        <a href="index.html#visit">Visit</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <a href="https://maps.google.com/?q=681+S+Front+St,+Columbus,+OH+43206" target="_blank" rel="noopener noreferrer">681 S Front St<br>Columbus, OH 43206</a>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <a href="https://www.instagram.com/abidehousecolumbus">Instagram</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>&copy; 2026 Abide House Columbus. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleNav(){var n=document.getElementById('mobile-nav');n.classList.toggle('open');document.body.style.overflow=n.classList.contains('open')?'hidden':'';}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){var n=document.getElementById('mobile-nav');n.classList.remove('open');document.body.style.overflow='';}});
+</script>
+</body>
+</html>
