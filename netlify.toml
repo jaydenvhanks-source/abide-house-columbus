@@ -1,0 +1,10 @@
+# This site is plain HTML. There's nothing to build: the files at the repo root
+# are what gets served, so the publish directory is the root itself.
+#
+# Declaring it here means a freshly connected Netlify site picks up the right
+# settings on its own, instead of relying on whatever was typed into the UI
+# when the site was first created.
+
+[build]
+  publish = "."
+  command = ""
