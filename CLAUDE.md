@@ -38,6 +38,25 @@ commit a camera original into `Pictures/web/`** — resize it first. Rough
 targets: hero ~2000px wide, gallery photos ~1400px, carousel photos ~900px,
 portraits 800x1200.
 
+### The logos are matted PNGs, not the files the owner sent
+
+`abide-house-logo.png`, `crowned-with-glory-logo.png`, `favicon.png`, and
+`apple-touch-icon.png` all came from artwork with a solid background baked in.
+The originals were white and greige rectangles. Each was converted to a
+transparent PNG by deriving alpha from luminance, so the ink now sits directly
+on the ivory and blush backgrounds with no box around it.
+
+If one of these is ever re-exported, matte it the same way. Dropping the
+original JPEG in will put a visible rectangle back on the page.
+
+The nav logo and the nav bar height are a pair. The bar is 88px so the
+"Abide House / Salon & Barbershop" lines under the arch stay readable at 76px.
+Below roughly 72px they turn to mush. Shrink both together or neither.
+
+`favicon.png` is the A/H monogram alone, cropped out of the arch, because the
+full lockup is unreadable at 16px. `apple-touch-icon.png` is the whole arch,
+which reads fine at home screen sizes.
+
 ### Some images are cropped differently per device
 
 These pairings are deliberate. Changing one side without the other will break

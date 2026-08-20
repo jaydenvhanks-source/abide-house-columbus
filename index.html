@@ -16,7 +16,8 @@
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="The Abide House sign and building at 681 S Front St in German Village, Columbus">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238a6d42' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 11 12 4l9 7'/%3E%3Cpath d='M5 10v10h14V10'/%3E%3Cpath d='M10 20v-6h4v6'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="64x64" href="Pictures/web/favicon.png">
+<link rel="apple-touch-icon" href="Pictures/web/apple-touch-icon.png">
 <link rel="preconnect" href="https://www.google.com">
 <link rel="preconnect" href="https://maps.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://maps.googleapis.com">
@@ -49,12 +50,21 @@
   .btn-sm{padding:10px 22px;font-size:11px}
 
   header{position:sticky;top:0;z-index:60;background:rgba(246,241,233,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:88px}
   .brand{display:flex;align-items:center;gap:11px}
   .brand .mark{color:var(--gold);flex:none}
   .brand .nm{font-family:var(--display);font-size:24px;font-weight:500;letter-spacing:.05em;line-height:1}
   .brand .nm b{font-weight:600}
   .brand .loc{display:block;font-family:var(--body);font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-top:4px;line-height:1}
+  /* the nav lockup is the logo itself. It's a transparent PNG, so it sits on
+     the ivory header with no white box behind it. The bar went 78px -> 88px to
+     fit it: below about 72px the "Abide House / Salon & Barbershop" lines under
+     the arch stop being readable. Shrink both together if either changes. */
+  .brand-logo{display:block;height:76px;width:auto;flex:none}
+  @media(max-width:700px){
+    .nav{height:76px}
+    .brand-logo{height:58px}
+  }
   .nav-links{display:flex;gap:34px;align-items:center}
   .nav-links a{font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft);transition:color .2s}
   .nav-links a:hover{color:var(--ink)}
@@ -161,6 +171,12 @@
   #team-salon{grid-area:content-a}
   #team-barbershop{grid-area:content-b}
   .team-content-inner{padding:30px 0}
+  /* Crowned With Glory's crest, above the barbers. Transparent PNG, so it
+     reads as ink on the blush background instead of sitting in a box. */
+  .brand-crest{display:block;width:100%;max-width:300px;height:auto;margin:0 auto 30px}
+  @media(max-width:600px){
+    .brand-crest{max-width:220px;margin-bottom:24px}
+  }
   .team-content .team{display:flex;flex-direction:column;gap:18px;max-width:680px;margin:0 auto}
   .team-content .member{flex-direction:row;align-items:stretch}
   .team-content .member .photo{width:160px;min-height:180px;flex:none;align-self:stretch}
@@ -362,9 +378,8 @@
 
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#top">
-      <span class="mark"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
-      <span class="nm">Abide <b>House</b><span class="loc">Columbus</span></span>
+    <a class="brand" href="#top" aria-label="Abide House Columbus, back to top">
+      <img class="brand-logo" src="Pictures/web/abide-house-logo.png" width="360" height="351" alt="Abide House Salon &amp; Barbershop">
     </a>
     <div class="nav-links">
       <a href="#team">Our Artists</a>
@@ -467,6 +482,7 @@
 
     <div class="team-content" id="team-barbershop">
       <div class="team-content-inner">
+        <img class="brand-crest" src="Pictures/web/crowned-with-glory-logo.png" width="600" height="608" alt="Crowned With Glory Barbershop" loading="lazy">
         <div class="team">
           <div class="member">
             <div class="photo" style="background-image:url('Pictures/web/aiden-portrait.jpg');background-size:cover;background-position:center 20%">
