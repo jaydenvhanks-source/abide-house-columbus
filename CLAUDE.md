@@ -76,14 +76,12 @@ switches to `shelby-full.jpg` at `center 75%`, which shows the clippers and
 tools at her waist that she wants visible. Putting an inline `style` back on
 that element would break the swap.
 
-**Caelyn has two images, and they are not redundant.** `caelyn-portrait.jpg`
-is a 2:3 portrait for her roster card. `caelyn-profile.jpg` is a wider 1000x920
-crop used only in her profile overlay. The overlay slot is landscape, about
-500x460, so a 2:3 portrait gets cropped to a narrow band through the middle,
-which magnifies the face and upscales it. Her source photo is framed tighter
-than the others (her head fills ~25% of the frame versus ~14% for Moriah), so
-the band was especially unflattering. The wider file matches the slot's aspect,
-so almost nothing is cropped. Don't collapse these back into one file.
+**The profile overlay photo slot is landscape, roughly 500x460.** A 2:3 portrait
+gets cropped to a band through the middle there, which magnifies the face and can
+upscale it. That's fine when the source photo is framed loosely. A tightly framed
+headshot may need a second, wider crop matching the slot's aspect, used only in
+the overlay, with the 2:3 portrait kept for the roster card. If a new artist's
+photo looks zoomed or soft in the overlay, that's the cause.
 
 **Portraits** use `background-position:center 20%`. At `center top` the mobile
 cards clipped chins.
