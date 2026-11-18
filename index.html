@@ -894,6 +894,29 @@ function toggleTeamGroup(id,btn){var c=document.getElementById('team-'+id);var o
 function openProfile(id){var el=document.getElementById('profile-'+id);if(el){el.classList.add('open');document.body.style.overflow='hidden';el.scrollTop=0;}}
 function closeProfile(){var o=document.querySelectorAll('.profile-overlay.open');for(var i=0;i<o.length;i++){o[i].classList.remove('open');}document.body.style.overflow='';}
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeProfile();var n=document.getElementById('mobile-nav');n.classList.remove('open');document.body.style.overflow='';}});
+
+/* Deep links for ads and link-in-bio. Both groups start collapsed, so a plain
+   #team link drops someone on two closed cards. These open the right one and
+   scroll to it:
+     abidehousecolumbus.com/#barbershop  -> Crowned With Glory, expanded
+     abidehousecolumbus.com/#salon       -> The Abide House Salon, expanded
+   #barbers and #stylists are accepted as aliases. */
+function openTeamFromHash(){
+  var map={'#barbershop':'barbershop','#barbers':'barbershop','#salon':'salon','#stylists':'salon'};
+  var id=map[(window.location.hash||'').toLowerCase()];
+  if(!id)return;
+  var content=document.getElementById('team-'+id);
+  var card=document.querySelector('.team-card.card-'+(id==='salon'?'a':'b'));
+  if(!content||!card)return;
+  if(!content.classList.contains('open')){
+    card.classList.add('open');
+    content.classList.add('open');
+    card.setAttribute('aria-expanded','true');
+  }
+  setTimeout(function(){content.scrollIntoView({behavior:'smooth',block:'start'});},120);
+}
+window.addEventListener('DOMContentLoaded',openTeamFromHash);
+window.addEventListener('hashchange',openTeamFromHash);
 </script>
 </body>
 </html>
