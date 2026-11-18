@@ -21,6 +21,26 @@ commit.
 | `index.html` | Homepage: hero, Our Artists, Our Home galleries, Visit |
 | `about.html` | The story, three co-founder cards, two scripture passages |
 | `Pictures/web/` | Every image the site loads |
+| `barbershop.html` | Share lander: Crowned With Glory preview, sends you to `/#barbershop` |
+| `salon.html` | Share lander: Abide House Salon preview, sends you to `/#salon` |
+
+## The two share landers
+
+`barbershop.html` and `salon.html` carry almost no content on purpose. They
+exist so a link posted to Instagram, Google Ads or a text message previews with
+that business's logo rather than the homepage photo.
+
+They are needed because **a `#hash` is never sent to the server**. A scraper
+fetching `/#barbershop` receives the homepage HTML and therefore the homepage's
+`og:image`. Only a real path can carry its own preview.
+
+Each redirects with `window.location.replace` and **no meta refresh**. That is
+deliberate: some link scrapers follow a meta refresh, land on the homepage, and
+use its preview image instead, which defeats the whole point. The visible logo
+and link are the fallback for anyone without JavaScript.
+
+The homepage's own `openTeamFromHash` handles the rest, opening the matching
+group once the redirect lands.
 
 ## Images: read this before adding any
 
